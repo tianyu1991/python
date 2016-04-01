@@ -28,3 +28,15 @@ def fun(str1,str2):
                 
 print fun("ABSS","BSAS")   
 print fun("ABSCS","ABCSC")
+
+#Given a number find the number of trailing zeroes in its factorial.
+N=int(raw_input())
+sum=1
+for n in range(1,N+1):
+    sum=sum*n
+
+N2=0
+while sum%10==0:
+    sum=sum//10
+    N2+=1
+print N2
