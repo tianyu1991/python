@@ -12,6 +12,10 @@ def case(li):
         print reverse(i)
     return ""
     
+num=int(raw_input())
+for g in range(0,num):
+    mylist=[n for n in raw_input().split(" ")]
+    case(mylist)
 
 #ana
 def fun(str1,str2):
