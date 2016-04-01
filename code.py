@@ -117,3 +117,20 @@ for i in range(0,num):
         else:
             print int(h2//1+1)
 ###78 57 82 9
+
+import math
+num=int(raw_input())
+for i in range(0,num):
+    mylist=[int(n, 10) for n in raw_input().split(" ")]
+    a=mylist[0]
+    H=mylist[1]
+    angle=mylist[2]
+    h=H-abs(a*math.tan(angle*3.141593/180)/2//1)
+    if h>H/2.0:
+        print int(h)
+    else:
+        h2=H/math.tan(angle*3.141593/180)*H/a/2
+        if h2 % 1==0:
+            print int(h2)
+        else:
+            print int(h2//1+1)
