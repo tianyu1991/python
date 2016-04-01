@@ -135,7 +135,12 @@ for i in range(0,num):
         else:
             print int(h2//1+1)
 
+##Big P is fairly good in mathematics.
+##His teacher has asked him to add two numbers.
+##Now , Big P has a problem that he sometimes writes a '6' as a '5' and vice versa.
+##Given two numbers, A and B, calculate the minimum and the maximum sum Big P could possibly get.
 
+Input:
 mylist=[n for n in raw_input().split(" ")]
 ma=0
 mi=0
@@ -166,4 +171,4 @@ for n in mylist:
                 else:
                     mi+=int(n)
                     ma+=int(n.replace("6","5")) 
-print str(ma)+" "+str(mi)
+print str(mi)+" "+str(ma)
