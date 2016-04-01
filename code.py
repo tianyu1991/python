@@ -41,7 +41,8 @@ while sum%10==0:
     N2+=1
 print N2
 
-#Recently you invented a brand-new definition of prime numbers. For a given set of positive integers S let's call X a prime if there are no elements in S which are divisors of X (except X itself).
+#Recently you invented a brand-new definition of prime numbers.
+#For a given set of positive integers S let's call X a prime if there are no elements in S which are divisors of X (except X itself).
 def fun(li):
     li2=[]
     for i in li:
@@ -62,3 +63,38 @@ else:
     li2=fun(li)
 
 print(" ".join(li2))
+
+#Panda has started learning about subsets.
+#His professor gave him a simple task. Given a list of numbers, Panda has to choose the subset which gives the maximum product. 
+#However, the professor asked Panda only to submit the maximum product obtained by taking exactly two numbers from the list. Please help Panda in finding out the answer to this assignment.
+
+num=int(raw_input())
+mylist=[int(n, 10) for n in raw_input().split(" ")]
+
+def fun(li):
+    m1=0
+    m2=0
+    l1=0
+    l2=0
+    for i in li:
+        if i>m1 :
+            m2=m1
+            m1=i
+        else:
+            if i>m2:
+                m2=i
+        if i<l1:
+            l2=l1
+            l1=i
+        else:
+            if i<l2:
+                l2=i
+    if (m1*m2)>(l1*l2):
+        return m1*m2
+    else:
+        return l1*l2
+
+if num==2:
+    print mylist[0]*mylist[1]
+else:
+    print fun(mylist)
