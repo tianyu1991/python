@@ -219,3 +219,24 @@ for g in range(0,num):
         print (n/2)*(n/2)
     else:
         print (n-1)*(n+1)/4
+
+
+##Now, he makes a kangaroo stand at the starting point, and lets him jump to the
+##finishing point - given the hop count of that particular kangaroo, figure out 
+##the number of jumps he would take between the starting point to the ending point. 
+##Both the starting point and the ending points are inclusive.
+
+##Note: He will jump only to those positions which are multiples of M or hop count.
+
+##Input:
+##First line contains number of test cases T. Next T lines contains three integers
+##A, B and M separated by single space. A denoted the starting point, B the finishing 
+##point - and M, the hop count - the distance covered by that kangaroo in one jump.
+num=int(raw_input())
+
+for g in range(0,num):
+    a,b,k=[int(n) for n in raw_input().split(" ")]
+    l=b/k-a/k
+    if a%k==0:
+        l+=1
+    print l
