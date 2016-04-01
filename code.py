@@ -176,3 +176,33 @@ for n in mylist:
                     mi+=int(n)
                     ma+=int(n.replace("6","5")) 
 print str(mi)+" "+str(ma)
+
+
+####
+num=int(raw_input())
+for g in range(0,num):
+    n,k=[int(n) for n in raw_input().split(" ")]
+    if  k>81:
+        print -1
+    else:
+        re=""
+        n1=k/9+1
+        n2=k%9
+        print n2
+        print n1
+        if n2<=n1:
+            n2-=1
+        if n2==-1:
+            n1-=1
+            if n1!=9:
+                n2=9
+            else:
+                n2=8
+            print n2
+        for i in range(1,n+1):
+            if(i%2==0):
+                re+=str(n2)
+            else:
+                re+=str(n1)
+        print re
+        
