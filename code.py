@@ -205,4 +205,17 @@ for g in range(0,num):
             else:
                 re+=str(n1)
         print re
-        
+##Little chandu is very fond of playing games. Recently, He found a few straws each of length 
+#1 inches in the store room. He took all of them and decided to mark a rectangular area on the floor with
+#straws and warn rest of the family members to not to enter that area so that he can play in peace.
+#He wants to maximize that area. But, unable to do so, He seeks for your help.
+#You being the elder brother of chandu, write a program for him to find maximum area that he can cover in inches using 
+#N straws.        
+num=int(raw_input())
+for g in range(0,num):
+    n=raw_input()
+    n=int(n)/2
+    if(n%2==0):
+        print (n/2)*(n/2)
+    else:
+        print (n-1)*(n+1)/4
