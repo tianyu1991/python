@@ -90,3 +90,26 @@ for g in range(0,num):
     for i in range(0,len(st)):
         st2.append(st[len(st)-i-1])
     print(" ".join(st2))
+
+
+
+import re
+num=raw_input()
+if num=="a" or int(num)<1 or int(num)>10 :
+    print "Invalid Test"
+else:
+    for g in range(0,int(num)):
+        st= raw_input()
+        if re.search( "([A-Za-z])",st)==None or len(st)>100:
+            print "Invalid Input"
+        else:
+            P=re.compile("[A-Z]")
+            p=re.compile("[a-z]")
+            n1=0
+            n2=0
+            for m in P.finditer(st):
+                n1+=1
+            for m in p.finditer(st):
+                n2+=1
+
+            print min(n1,n2)
