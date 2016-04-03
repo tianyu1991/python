@@ -59,3 +59,14 @@ for g in range(0,num):
             print L[t]
         else:
             print 0
+
+
+num=int(raw_input())
+for g in range(0,num):
+    nu,d=[int(n) for n in raw_input().split(" ")]
+    list=[int(n) for n in raw_input().split(" ")]
+    ab="Yes"
+    for i in range(0,nu-1):
+        if abs(list[i]-list[i+1])>d:
+            ab="No"
+    print ab
