@@ -23,12 +23,20 @@ num=int(raw_input())
 ##two numbers X and Y and asked him to find out the Nth number
 ##of the series which began with X numbers of Y’s and the following
 ##elements are equal to the sum of the last X numbers in the series. Help Harold find the Nth number of the series
+num=int(raw_input())
 for g in range(0,num):
     x,y,n=[int(n) for n in raw_input().split(" ")]
-    L=[]
-    for i in range(0,x):
-        L.append(y)
-    for i in range(x,n):
-        lnext=L[i-1]+L[i-2]+L[i-3]
-        L.append(lnext)
-    print L[n-1]
+    if x>=n:
+        print y
+    else:
+        if y==0:
+            print 0
+        else:
+            L=[]
+            for i in range(0,x):
+                L.append(y)
+            for i in range(x,n):
+                lnext=sum(L)
+                L.append(lnext)
+                L.pop(0)
+            print L[x-1]
