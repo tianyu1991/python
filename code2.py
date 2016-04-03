@@ -40,3 +40,22 @@ for g in range(0,num):
                 L.append(lnext)
                 L.pop(0)
             print L[x-1]
+
+num=int(raw_input())
+for g in range(0,num):
+    n,t=[int(n) for n in raw_input().split(" ")]
+    if t==0:
+        print n
+    else:
+        L=[n]
+        for i in range(0,t):
+            n2=L[i]-L[i]/2-L[i]%2
+            n2=n2-n2/4
+            if L[i]==1:
+                n2=0
+                break
+            L.append(n2)
+        if n2!=0:
+            print L[t]
+        else:
+            print 0
