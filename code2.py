@@ -113,3 +113,17 @@ else:
                 n2+=1
 
             print min(n1,n2)
+
+
+##Max has a rectangular prism with dimensions A, B, and C. He writes A, B, 
+##and C on piece of paper. When he is not looking, Andrew replaces these numbers 
+##with X=A+B, Y=B+C, and Z=A+C. Now, Max sees three numbers X, Y, Z on the 
+##piece of paper. But Max needs help computing the surface area of this rectangular prism. Help him!
+num=int(raw_input())
+for g in range(0,num):
+    x,y,z=[int(n) for n in raw_input().split(" ")]
+    b=float(x+z-y)/2
+    a=x-b
+    c=z-b
+    sur=2*(a*b+b*c+c*a)
+    print "%.2f" % sur
