@@ -127,3 +127,16 @@ for g in range(0,num):
     c=z-b
     sur=2*(a*b+b*c+c*a)
     print "%.2f" % sur
+
+
+##You are given a string, which contains entirely of decimal digits (0-9). Each digit is made of a certain number of dashes, 
+##as shown in the image below. For instance 1 is made of 2 dashes, 8 is made of 7 dashes and so on
+
+def char2num(s):
+    return {'0': 6, '1': 2, '2': 5, '3': 5, '4': 4, '5': 5, '6': 6, '7': 3, '8': 7, '9': 6}[s]
+
+def str2int(s):
+    return reduce(lambda x,y: x+y, map(char2num, s))
+
+st=raw_input()
+print str2int(st)
