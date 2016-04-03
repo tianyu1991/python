@@ -80,3 +80,13 @@ for g in range(0,num):
         if st2[-1]!=st[i]:
             st2=st2+st[i]
     print st2[1:]
+
+
+###If there are W words, word 1 is swapped with word W, word 2 is swapped with word W-1 and so on. 
+num=int(raw_input())
+for g in range(0,num):
+    st= raw_input().split(" ")
+    st2=[]
+    for i in range(0,len(st)):
+        st2.append(st[len(st)-i-1])
+    print(" ".join(st2))
