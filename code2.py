@@ -70,3 +70,13 @@ for g in range(0,num):
         if abs(list[i]-list[i+1])>d:
             ab="No"
     print ab
+
+###Given a string, replace all the consecutively occurring characters by a single, same character.
+num=int(raw_input())
+for g in range(0,num):
+    st= raw_input()
+    st2="0"
+    for i in range(0,len(st)):
+        if st2[-1]!=st[i]:
+            st2=st2+st[i]
+    print st2[1:]
